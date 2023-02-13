@@ -1,0 +1,40 @@
+/* BRAKPOINTS */
+$breakpoint-sm: 375px;
+$breakpoint-lg: 1440px;
+/* COLORS */
+$primary:   #A8FF35;
+$green-2:   #87D322;
+$button-hover:  #8CC83A;
+$black: #000000;
+$black-2:   #2B2B2B;
+$grey-1:    #8B8B8B;
+$grey-2:    #ADADAD;
+$grey-3:    #F5F5F5;
+$grey-4:    #F1F1F1;
+$off-white: #FFFFFF;
+/* FONTS */
+@mixin hero-font{
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 112%;
+    @media screen and (min-width:$breakpoint-lg) {
+    font-size: 72px;
+    }
+}
+@mixin header-font{
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 43px;
+    @media screen and (min-width:$breakpoint-lg) {
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 76px;
+    }
+}
+@mixin text{
+    font-size: 14px;
+    line-height: 150%;
+        @media screen and (min-width:$breakpoint-lg){
+            font-size: 18px;
+        }
+}
