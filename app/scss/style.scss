@@ -208,11 +208,7 @@ button{
         right: 0;
         top: 0;
         transform: translate(110px, -5px) rotate(15deg);
-        font-weight: 700;
-        width: 130px;
-        font-size: 14px;
-        line-height: 14px;
-        font-style: italic;
+        @include abs-text;
     }
 
     // .hero__abs--arrow
@@ -281,4 +277,114 @@ button{
     // .content__container
 
     &__container {}
+}
+
+.open {
+    background-color: $primary;
+    padding: 80px 0;
+    @media screen and (min-width:$breakpoint-lg){
+        padding: 140px 0px;
+    }
+    
+    // .open__container
+
+    &__container {
+        text-align: center;
+    }
+
+    // .open__header
+
+    &__header {
+        @include header-font;
+        margin-bottom: 100px;
+        @media screen and (min-width:$breakpoint-lg){
+            margin-bottom: 60px;
+        }
+    }
+
+    // .open__tab
+
+    &__tab {
+        background-color: $grey-3;
+        border-radius: 16px;
+        position: relative;
+        max-width: 500px;
+        margin: 0 auto;
+        margin-bottom: 80px;
+        @media screen and (min-width:$breakpoint-lg){
+            margin-bottom: 60px;
+        }
+    }
+    &__image{
+        max-width: 290px;
+        height: 70px;
+        padding: 25px 0;
+        @media screen and (min-width:$breakpoint-lg){
+            max-width: 340px;
+            height: 82px;
+            padding: 60px 0;
+        }
+    }
+    // .open__abs--text--left
+
+    &__abs--text--left {
+        position: absolute;
+        left: 0;
+        top: 0;
+        @include abs-text; 
+        transform: translate(0, 140px) rotate(2deg);
+        @media screen and (min-width:$breakpoint-lg){
+            transform: translate(-150px, 130px) rotate(6deg);
+            
+        }
+        
+    }
+    &__abs--image--left {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 28px;
+        height: 35px;
+        transform: translate(50px, 100px) rotate(-110deg);
+        @media screen and (min-width:$breakpoint-lg){
+            transform: translate(-70px, 90px) rotate(-80deg);
+        }
+        
+    }
+    // .open__abs--text--right
+
+    &__abs--text--right {
+        position: absolute;
+        right: 0;
+        top: 0;
+        @include abs-text;
+        transform: translate(0px, -50px) rotate(-2deg);
+        @media screen and (min-width:$breakpoint-lg){
+            transform: translate(150px, 40px) rotate(6deg);
+        }
+    }
+    
+    &__abs--image--right{
+        position: absolute;
+        width: 28px;
+        height: 35px;
+        right: 0;
+        top: 0;
+        transform: translate(-60px, -15px) rotate(60deg);
+        @media screen and (min-width:$breakpoint-lg){
+            transform: translate(70px, 70px) rotate(80deg);
+        }
+        
+
+    }
+    // .open__text
+
+    &__text {
+        @include text;
+        @media screen and (min-width:$breakpoint-lg){
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+    }
 }

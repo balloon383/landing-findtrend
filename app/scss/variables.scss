@@ -38,3 +38,10 @@ $off-white: #FFFFFF;
             font-size: 18px;
         }
 }
+@mixin abs-text{
+    font-weight: 700;
+    width: 130px;
+    font-size: 14px;
+    line-height: 14px;
+    font-style: italic;
+}
