@@ -449,6 +449,63 @@ button{
     }
 }
 
+.platform {
+
+    // .platform__header
+    padding: 140px 0px;
+    background-color: $grey-3;
+    &__header {
+        text-align: center;
+        @include header-font;
+        margin-bottom: 80px;
+    }
+
+    // .platform__switcher
+
+    &__switcher {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    @media screen and (min-width:$breakpoint-lg) {
+        margin-bottom: 80px;
+    }
+    }
+
+    // .platform__switcher--button
+
+    &__switcher--button {
+    padding: 16px;
+    background-color: $off-white;
+    border-radius: 12px;
+    cursor: pointer;
+        @media screen and (min-width:$breakpoint-lg) {
+            padding: 32px; 
+        }
+    }
+
+    // .platform__pubs
+
+    &__pubs {
+        margin: 0 auto;
+        max-width: 800px;
+    }
+    &__img{
+        max-width: 800px;
+        margin-bottom: 45px;
+    }
+    // .platform__button
+
+    &__button {
+        padding: 16px 32px;
+        background-color: $black;
+        color: $off-white;
+        border-radius: 40px;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
 .content {
 
     // .content__container
