@@ -388,3 +388,19 @@ button{
 
     }
 }
+.comment {
+    padding: 140px 0px;
+    // .comment__header
+
+    &__header {
+        @include header-font;
+        max-width: 1160px;
+        margin: 0 auto;
+    }
+
+    // .comment__header--gray
+
+    &__header--gray {
+        color: $grey-2;
+    }
+}
