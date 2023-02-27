@@ -404,3 +404,54 @@ button{
         color: $grey-2;
     }
 }
+.startup {
+
+    // .startup__header
+    padding: 140px 0px;
+    &__header {
+        text-align: center;
+        @include header-font;
+        margin-bottom: 80px;
+    }
+
+    // .startup__logo--section
+
+    &__logo--section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+
+    // .startup__logo--box
+
+    &__logo--box {
+        padding: 25px;
+        background-color: $grey-3;
+        border-radius: 8px;
+        flex: 1 1 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    @media screen and (min-width:$breakpoint-lg) {
+        flex: 1 1 15%;
+        padding: 40px;
+        }
+    }
+    &__img{
+        max-width: 115px;
+        max-height: 25px;
+    @media screen and (min-width:$breakpoint-lg) {
+        max-width: 190px;
+        max-height: 40px;
+    }
+    }
+}
+
+.content {
+
+    // .content__container
+
+    &__container {}
+}
