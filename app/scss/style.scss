@@ -488,11 +488,17 @@ button{
 
     &__pubs {
         margin: 0 auto;
-        max-width: 800px;
+        max-width: 340px;
+        @media screen and (min-width:$breakpoint-lg){
+            max-width: 800px; 
+        }
     }
     &__img{
-        max-width: 800px;
+        max-width: 340px;
         margin-bottom: 45px;
+        @media screen and (min-width:$breakpoint-lg) {
+            max-width: 800px;
+        }
     }
     // .platform__button
 
@@ -503,6 +509,177 @@ button{
         border-radius: 40px;
         display: block;
         margin: 0 auto;
+    }
+}
+
+.deals {
+    background-color: $black;
+    padding: 140px 0px;
+    // .deals__header
+
+    &__header {
+        @include header-font;
+        text-align: center;
+        color: $off-white;
+        margin-bottom: 40px;
+    }
+
+    // .deals__toggle--container
+
+    &__toggle--container {
+        text-align: center;
+        color: $grey-3;
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+
+    // .deals__toggle--period
+    &__toggle--button{
+        position: relative;
+        margin: 0px 60px;
+            cursor: pointer;
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100px;
+            height: 50px;
+            border-radius: 100px;
+            background-color: $off-white;
+            transform: translate(-43px, -18px);
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 42px;
+            height: 42px;
+            background-color: $green-2;
+            border-radius: 50%;
+            transform: translate(-37px, -14px);
+            transition: all .2s linear;
+        }
+        &:checked::after{
+            transform: translate(10px, -14px);
+        }
+    }
+    &__toggle--period {
+
+    }
+
+    // .deals__cards--container
+
+    &__cards--container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 24px;
+        @media screen and (min-width:$breakpoint-lg) {
+        column-gap: 40px;
+        flex-direction: row;
+            }
+    }
+
+    // .deals__card
+
+    &__card {
+        background-color: $off-white;
+        border-radius: 16px;
+        margin-bottom: 24px;
+        padding: 32px 44px;
+        display: flex;
+        flex-direction: column;
+        @media screen and (min-width:$breakpoint-lg) {
+                flex: 1 1 30%;
+            }
+        &--central {
+                background-color: $green-2;
+            }
+    }
+    // .deals__card--header
+
+    &__card--header {
+        font-size: 36px;
+        line-height: 100%;
+        margin-bottom: 8px;
+    }
+
+    // .deals__card--text
+
+    &__card--text {
+        @include text;
+        padding-bottom: 30px;
+        border-bottom: 1px solid black;
+        margin-bottom: 30px;
+    }
+    // .deals__card--price
+
+    &__card--price {
+        @include header-font;
+        margin-bottom: 24px;
+        @media screen and (min-width:$breakpoint-lg) {
+            margin-bottom: 30px;
+        }
+    }
+
+    // .deals__card--per
+
+    &__card--per {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 100%;
+    }
+
+    // .deals__card--ul
+
+    &__card--ul {
+        padding-bottom: 40px;
+    }
+
+    // .deals__card--li
+
+    &__card--li {
+        margin-bottom: 25px;
+        @include text;
+        position: relative;
+        padding-left: 20px;
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 14px;
+            width: 9px;
+            border-right: 2px solid black;
+            border-bottom: 2px solid black;
+            transform: translate(0px, 2px) rotate(45deg);
+        }
+    }
+
+    // .deals__card--button
+    &__card--button-container{
+        flex-grow: 1;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    &__card--button {
+        padding: 16px 88px;
+        border: none;
+        border-radius: 30px;
+        color: $black;
+        font-weight: 700;
+        line-height: 140%;
+        letter-spacing: .5px;
+        background-color: $green-2;
+        &-central{
+            color: $off-white;
+            background-color: $black;
+        }
     }
 }
 
