@@ -683,9 +683,67 @@ button{
     }
 }
 
-.content {
+.join {
+    background-color: #A8FF35;
+    padding: 140px 0;
+    // .join__header
 
-    // .content__container
+    &__header {
+        margin-bottom: 26px;
+        text-align: center;
+        color: $black;
+        @include header-font;
+        @media screen and (min-width:$breakpoint-lg) {
+            margin-bottom: 40px;
+        }
+        
+    }
 
-    &__container {}
+    // .join__header--gray
+
+    &__header--gray {
+        color: #87D322;
+    }
+    &__button{
+        color: #fff;
+        border-radius: 40px;
+        background-color: #000;
+        padding: 12px 24px;
+        border: none;
+        display: block;
+        margin: 0 auto;
+        @media screen and (min-width:$breakpoint-lg) {
+            padding:16px 32px;
+        }
+    }
+}
+
+
+
+
+.footer {
+    // .footer__ul
+
+    &__ul {
+        display: flex;
+    }
+
+    // .footer__logo
+
+    &__logo {}
+
+    // .footer__info
+
+    &__info {}
+
+    // .footer__info--ul
+
+    &__info--ul {}
+}
+
+.header {
+
+    // .header__logo--full
+
+    &__logo--full {}
 }
