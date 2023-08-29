@@ -272,13 +272,6 @@ button{
     
 }
 
-.content {
-
-    // .content__container
-
-    &__container {}
-}
-
 .open {
     background-color: $primary;
     padding: 80px 0;
@@ -564,9 +557,6 @@ button{
         &:checked::after{
             transform: translate(10px, -14px);
         }
-    }
-    &__toggle--period {
-
     }
 
     // .deals__cards--container
